@@ -1,0 +1,9 @@
+/* Import all CSS files */
+@import 'main.css';
+@import 'blog.css';
+@import 'about.css';
+@import 'ctfwriteup.css';
+@import 'style.css';
+@import 'notfound.css';
+@import 'game.css';
+@import 'error.css';
