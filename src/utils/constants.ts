@@ -2,7 +2,7 @@ export const aboutText = `[Personal Information]
 ------------------
 Name: Eli Kinyanjui alias Player Komona
 Role: cybersecurity enthusias
-Specialization: Cloud & Network Security
+Fields : Pentester , Red teamer , cloud computing
 
 [Professional Profile]
 -------------------
