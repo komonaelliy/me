@@ -1,12 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" type="image/png" href="/player-logo.png">
-    <link rel="shortcut icon" type="image/x-icon" href="/player-logo.ico"> <!-- Optional fallback -->
+    <link rel="shortcut icon" type="image/x-icon" href="/player-logo.ico">
     <title>Player Komona</title>
-    <script type="module" crossorigin src="/assets/index-AuciRxdw.js"></script>
+    <script>
+      (function(){
+        let redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-CZic4lY0.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-S4cxp9Xp.css">
   </head>
   <body>
