@@ -4,20 +4,20 @@
     <meta charset="utf-8">
     <title>Player Komona</title>
     <script>
-      // Single Page Apps for GitHub Pages
-      // https://github.com/rafgraph/spa-github-pages
-      const pathSegmentsToKeep = 0;
-
-      const l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?p=/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
+      const segment = 1;
+      const currentPath = window.location.pathname;
+      
+      // Store the URL we're trying to reach
+      sessionStorage.setItem('redirect', currentPath);
+      
+      // Redirect to the root with a special parameter
+      window.location.href = '/' + 
+        (currentPath.indexOf('?') >= 0 ? '&' : '?') + 
+        'redirectTo=' + 
+        encodeURIComponent(currentPath);
     </script>
   </head>
   <body>
+    <div>Redirecting...</div>
   </body>
 </html>
