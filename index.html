@@ -8,18 +8,16 @@
     <title>Player Komona</title>
     <script>
       (function() {
-        // Check if we have a redirect stored
-        const redirect = sessionStorage.getItem('redirect');
-        if (redirect) {
-          // Clear it
-          sessionStorage.removeItem('redirect');
-          // Perform the redirect
-          window.history.replaceState(null, null, redirect);
-        }
+        const updateVh = () => {
+          const vh = window.innerHeight * 0.01;
+          document.documentElement.style.setProperty('--vh', `${vh}px`);
+        };
+        window.addEventListener('resize', updateVh);
+        updateVh();
       })();
     </script>
-    <script type="module" crossorigin src="/assets/index-Dy8DTMeB.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-pAT7xVtG.css">
+    <script type="module" crossorigin src="/assets/index-KYSv59aV.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CJPjPZIf.css">
   </head>
   <body>
     <div id="root"></div>
