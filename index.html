@@ -8,6 +8,14 @@
     <title>Player Komona</title>
     <script>
       (function() {
+        // Handle redirect
+        const redirect = sessionStorage.getItem('redirect');
+        if (redirect) {
+          sessionStorage.removeItem('redirect');
+          window.history.replaceState(null, null, redirect);
+        }
+
+        // Handle viewport height
         const updateVh = () => {
           const vh = window.innerHeight * 0.01;
           document.documentElement.style.setProperty('--vh', `${vh}px`);
